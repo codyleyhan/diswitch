@@ -1,9 +1,9 @@
 <template>
   <tr>
+    <td>{{ s.name }}</td>
     <td class="uk-table-link">
       <a class="uk-link-reset" :href="'http://' + s.hostname">{{ s.hostname }}</a>
     </td>
-    <td>{{ s.name }}</td>
     <td>
       <div v-if="toggling" uk-spinner></div>
       <button v-else class="uk-button"

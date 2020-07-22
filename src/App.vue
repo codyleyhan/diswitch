@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-container uk-dark" id="app">
+  <div class="uk-container" id="app">
     <h1>Switches</h1>
     <switch-form @add:switch="addSwitch" />
     <switch-table :switches="switches" />
