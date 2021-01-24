@@ -11,6 +11,9 @@
       @click="toggle"
       :disabled="unreachable">Toggle</button>
     </td>
+    <td>
+      <button class="uk-button uk-button-danger" @click="remove">Remove</button>
+    </td>
   </tr>
 </template>
 
@@ -68,6 +71,9 @@ export default {
         this.unreachable = true;
       }
       this.toggling = false;
+    },
+    remove() {
+      this.$parent.$emit('remove-switch', this.$props.s.id);
     },
   },
 };

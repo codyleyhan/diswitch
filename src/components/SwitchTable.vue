@@ -6,6 +6,7 @@
           <th>Nickname</th>
           <th>Hostname</th>
           <th>Toggle</th>
+          <th>Remove</th>
         </tr>
       </thead>
       <tbody>

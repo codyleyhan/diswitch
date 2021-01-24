@@ -2,7 +2,7 @@
   <div class="uk-container" id="app">
     <h1>Switches</h1>
     <switch-form @add:switch="addSwitch" />
-    <switch-table :switches="switches" />
+    <switch-table :switches="switches" @remove-switch="removeSwitch" />
   </div>
 </template>
 
@@ -43,6 +43,10 @@ export default {
       const id = lastId + 1;
       const newSwitch = { ...s, id };
       this.switches = [...this.switches, newSwitch];
+    },
+    removeSwitch(id) {
+      console.log('HERE', id);
+      this.switches = this.switches.filter((s) => s.id !== id);
     },
   },
 };

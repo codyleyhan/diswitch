@@ -26,7 +26,7 @@
             v-model="smartSwitch.hostname"
             id="hostname"
             type="text"
-            placeholder="device.local"
+            placeholder="I.E. device.local"
             :class="{ 'uk-form-danger': submitting && invalidHostname }"
             @focus="clearStatus"
           />
@@ -82,7 +82,7 @@ export default {
       return this.smartSwitch.name === '';
     },
     invalidHostname() {
-      return this.smartSwitch.hostname === '' || !this.smartSwitch.hostname.endsWith('.local');
+      return this.smartSwitch.hostname === '';
     },
   },
 };
