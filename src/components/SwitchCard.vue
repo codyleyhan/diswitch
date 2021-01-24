@@ -13,7 +13,7 @@
       <p class="uk-text-meta">Hostname: {{ s.hostname }}</p>
       <div class="uk-button-group">
     <button
-    class="uk-button toggle-button"
+    class="uk-button uk-button-default toggle-button"
         @click="toggle"
         :disabled="unreachable || toggling"
     >
