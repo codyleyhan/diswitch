@@ -1,6 +1,10 @@
 <template>
-  <div id="switch-form">
-    <form class="uk-form-stacked" @submit.prevent="handleSubmit">
+  <div
+  id="switch-form" class="uk-card uk-card-default uk-margin uk-width-1-2@m uk-box-shadow-small">
+    <div class="uk-card-header">
+      <h3 class="uk-card-title">Add a new switch</h3>
+      </div>
+    <form class="uk-card-body uk-form-stacked" @submit.prevent="handleSubmit">
       <div class="uk-margin">
         <label class="uk-form-label" for="name">Name</label>
         <div class="uk-form-controls">
@@ -89,4 +93,7 @@ export default {
 </script>
 
 <style scoped>
+.uk-card-body {
+    background-color: white;
+}
 </style>

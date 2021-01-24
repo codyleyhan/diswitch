@@ -2,7 +2,8 @@
   <div class="uk-container" id="app">
     <h1>Switches</h1>
     <switch-form @add:switch="addSwitch" />
-    <switch-table :switches="switches" @remove-switch="removeSwitch" />
+      <switch-card
+    @remove:switch="removeSwitch" :s="s" v-for="s in switches" :key="s.id" />
   </div>
 </template>
 
@@ -10,7 +11,8 @@
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 import SwitchForm from '@/components/SwitchForm.vue';
-import SwitchTable from '@/components/SwitchTable.vue';
+// import SwitchTable from '@/components/SwitchTable.vue';
+import SwitchCard from '@/components/SwitchCard.vue';
 
 UIkit.use(Icons);
 
@@ -18,7 +20,7 @@ export default {
   name: 'App',
   components: {
     SwitchForm,
-    SwitchTable,
+    SwitchCard,
   },
   data() {
     return {
@@ -45,7 +47,6 @@ export default {
       this.switches = [...this.switches, newSwitch];
     },
     removeSwitch(id) {
-      console.log('HERE', id);
       this.switches = this.switches.filter((s) => s.id !== id);
     },
   },
