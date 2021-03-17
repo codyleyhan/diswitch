@@ -10,6 +10,9 @@ import {
     Switch,
     useToast,
   } from '@chakra-ui/react';
+import {
+    Link
+} from 'react-router-dom';
   import {
     useQuery,
     useMutation,
@@ -53,7 +56,7 @@ export const SwitchCard = props => {
     return <LinkBox>
     <Flex>
         <Box p={2}>
-            <LinkOverlay href={'/switches/' + props.id}><Heading size="md">{props.name}</Heading></LinkOverlay>
+            <LinkOverlay as={Link} to={'/switches/' + props.id}><Heading size="md">{props.name}</Heading></LinkOverlay>
         </Box>
         <Spacer />
         <Box>
